@@ -1,0 +1,72 @@
+Multichar_Symbols
++Redup +ToneCh +ConsCh +IrrTone +Subst +Insert +Remove
+
+LEXICON Root
+luôn     Reduplication ;
+nhanh    Reduplication ;
+lâu      Reduplication ;
+đỏ       ToneChange ;
+trắng    ToneChange ;
+chầm     ToneChange ;
+biếc     ConsChange ;
+bốp      ConsChange ;
+thiếp    ConsChange ;
+lơ_láo   IrrTone ;
+thơ_thẩn IrrTone ;
+ngơ_ngác IrrTone ;
+trời     Substitution ;
+ăn       Insertion ;
+đã_ăn    Removal ;
+
+LEXICON Reduplication
++Redup:0   Repeat ;
+
+LEXICON Repeat
+luôn     # ;
+nhanh    # ;
+lâu      # ;
+
+LEXICON ToneChange
++ToneCh:0   ToneVariants ;
+
+LEXICON ToneVariants
+đo:đỏ    # ;
+trăng:trắng # ;
+chầm:chậm # ;
+
+LEXICON ConsChange
++ConsCh:0   ConsVariants ;
+
+LEXICON ConsVariants
+biêng:biếc # ;
+bôm:bốp    # ;
+thiêm:thiếp # ;
+
+LEXICON IrrTone
++IrrTone:0   IrrToneVariants ;
+
+LEXICON IrrToneVariants
+thơ_thẩn:thơ_thơ_thẩn_thẩn   # ;
+lơ_láo:lơ_lơ_láo_láo         # ;
+ngơ_ngác:ngơ_ngơ_ngác_ngác   # ;
+
+LEXICON Substitution
++Subst:0 SubstVariants ;
+
+LEXICON SubstVariants
+chời:trời   # ;
+
+LEXICON Insertion
++Insert:0 InsertVariants ;
+
+LEXICON InsertVariants
+đang_ăn:ăn  # ;   ! Inserted "đang" to mark progressive
+
+
+LEXICON Removal
++Remove:0 RemoveVariants ;
+
+LEXICON RemoveVariants
+ăn:đã_ăn  # ;  ! remove past marker "đã"
+
+END
