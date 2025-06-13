@@ -73,7 +73,7 @@ LEXICON NSubst
 +Subst:'' SubstVariants ;
 
 LEXICON SubstVariants
-+chời:chời   # ;
++đo:đo   # ;
 
 ! =================
 ! ==== Verbs ======
