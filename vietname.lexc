@@ -37,33 +37,33 @@ LEXICON AdjRedup
 +Adj+Redup:^   RedupResult ;
 
 LEXICON RedupResult
-+luôn     # ;
-+nhanh    # ;
-+lâu      # ;
+:luôn     # ;
+:nhanh    # ;
+:lâu      # ;
 
 LEXICON AdjTone
 +Adj+ToneCh:0   ToneVariants ;
 
 LEXICON ToneVariants
-+đo:đỏ     # ;
-+trăng:trắng # ;
-+chầm:chậm   # ;
+đo:đỏ     # ;
+trăng:trắng # ;
+chầm:chậm   # ;
 
 LEXICON AdjCons
 +Adj+ConsCh:0   ConsVariants ;
 
 LEXICON ConsVariants
-+biêng:biếc   # ;
-+bôm:bốp      # ;
-+thiêm:thiếp  # ;
+biêng:biếc   # ;
+bôm:bốp      # ;
+thiêm:thiếp  # ;
 
 LEXICON AdjIrr
 +Adj+IrrTone:0   IrrVariants ;
 
 LEXICON IrrVariants
-+thơ_thẩn:thơ_thơ_thẩn_thẩn   # ;
-+lơ_láo:lơ_lơ_láo_láo         # ;
-+ngơ_ngác:ngơ_ngơ_ngác_ngác   # ;
+thơ_thẩn:thơ_thơ_thẩn_thẩn   # ;
+lơ_láo:lơ_lơ_láo_láo         # ;
+ngơ_ngác:ngơ_ngơ_ngác_ngác   # ;
 
 ! =================
 ! ==== Nouns ======
