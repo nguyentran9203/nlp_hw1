@@ -76,7 +76,7 @@ LEXICON NSubst
 +N+Subst:0 SubstVariants ;
 
 LEXICON SubstVariants
-+chời:trời   # ;
++chời:chời   # ;
 
 ! =================
 ! ==== Verbs ======
