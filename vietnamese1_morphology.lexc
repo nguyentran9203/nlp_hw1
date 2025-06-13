@@ -34,14 +34,9 @@ LEXICON Adjectives
     ngơ_ngác AdjIrr ;
 
 LEXICON AdjRedup
-+Adj+Redup:luôn   RedupResult ;
-+Adj+Redup:nhanh   RedupResult ;
-+Adj+Redup:lâu   RedupResult ;
-
-LEXICON RedupResult
-+luôn     # ;
-+nhanh    # ;
-+lâu      # ;
++Adj+Redup:luôn   # ;
++Adj+Redup:nhanh  # ;
++Adj+Redup:lâu   # ;
 
 LEXICON AdjTone
 +Adj+ToneCh:''   ToneVariants ;
