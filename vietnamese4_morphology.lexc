@@ -34,9 +34,9 @@ LEXICON AdjRedup
 +Redup:   Repeat ;
 
 LEXICON Repeat
-+luôn # ;
-+nhanh # ;
-+nhanh # ;
++ luôn # ;
++ nhanh # ;
++ lâu # ;
 
 LEXICON AdjTone
 +ToneCh:''   ToneVariants ;
