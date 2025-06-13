@@ -34,7 +34,7 @@ LEXICON Adjectives
     ngơ_ngác AdjIrr ;
 
 LEXICON AdjRedup
-+Adj+Redup:^   RedupResult ;
++Adj+Redup:''   RedupResult ;
 
 LEXICON RedupResult
 +luôn     # ;
@@ -42,7 +42,7 @@ LEXICON RedupResult
 +lâu      # ;
 
 LEXICON AdjTone
-+Adj+ToneCh:0   ToneVariants ;
++Adj+ToneCh:''   ToneVariants ;
 
 LEXICON ToneVariants
 đo:đo_đỏ     # ;
@@ -58,7 +58,7 @@ LEXICON ConsVariants
 +thiêm:thiêm_thiếp  # ;
 
 LEXICON AdjIrr
-+Adj+IrrTone:0   IrrVariants ;
++Adj+IrrTone:''   IrrVariants ;
 
 LEXICON IrrVariants
 +thơ_thẩn:thơ_thơ_thẩn_thẩn   # ;
@@ -73,7 +73,7 @@ LEXICON Nouns
 trời     NSubst ;
 
 LEXICON NSubst
-+N+Subst:0 SubstVariants ;
++N+Subst:'' SubstVariants ;
 
 LEXICON SubstVariants
 +chời:chời   # ;
@@ -87,13 +87,13 @@ LEXICON Verbs
 đã_ăn  VRemove ;
 
 LEXICON VInsert
-+V+Insert:0 InsertVariants ;
++V+Insert:'' InsertVariants ;
 
 LEXICON InsertVariants
 +đang:đang_ăn  # ;
 
 LEXICON VRemove
-+V+Remove:0 RemoveVariants ;
++V+Remove:'' RemoveVariants ;
 
 LEXICON RemoveVariants
 +đã:ăn  # ;
