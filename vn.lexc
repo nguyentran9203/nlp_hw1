@@ -1,72 +1,101 @@
 Multichar_Symbols
-+Redup +ToneCh +ConsCh +IrrTone +Subst +Insert +Remove
+    +Adj     ! Adjective
+    +N       ! Noun
+    +V       ! Verb
+    +Redup   ! Reduplication
+    +ToneCh  ! Tone change
+    +ConsCh  ! Consonant change
+    +IrrTone ! Irregular tone redup
+    +Subst   ! Substitution
+    +Insert  ! Insertion
+    +Remove  ! Removal
 
 LEXICON Root
-luôn     Reduplication ;
-nhanh    Reduplication ;
-lâu      Reduplication ;
-đỏ       ToneChange ;
-trắng    ToneChange ;
-chầm     ToneChange ;
-biếc     ConsChange ;
-bốp      ConsChange ;
-thiếp    ConsChange ;
-lơ_láo   IrrTone ;
-thơ_thẩn IrrTone ;
-ngơ_ngác IrrTone ;
-trời     Substitution ;
-ăn       Insertion ;
-đã_ăn    Removal ;
+    Adjectives ;
+    Nouns ;
+    Verbs ;
 
-LEXICON Reduplication
-+Redup:0   Repeat ;
+! =====================
+! ==== Adjectives =====
+! =====================
 
-LEXICON Repeat
+LEXICON Adjectives
+    luôn     AdjRedup ;
+    nhanh    AdjRedup ;
+    lâu      AdjRedup ;
+    đỏ       AdjTone ;
+    trắng    AdjTone ;
+    chầm     AdjTone ;
+    biếc     AdjCons ;
+    bốp      AdjCons ;
+    thiếp    AdjCons ;
+    lơ_láo   AdjIrr ;
+    thơ_thẩn AdjIrr ;
+    ngơ_ngác AdjIrr ;
+
+LEXICON AdjRedup
++Adj+Redup:^   RedupResult ;
+
+LEXICON RedupResult
 luôn     # ;
 nhanh    # ;
 lâu      # ;
 
-LEXICON ToneChange
-+ToneCh:0   ToneVariants ;
+LEXICON AdjTone
++Adj+ToneCh:0   ToneVariants ;
 
 LEXICON ToneVariants
-đo:đỏ    # ;
+đo:đỏ     # ;
 trăng:trắng # ;
-chầm:chậm # ;
+chầm:chậm   # ;
 
-LEXICON ConsChange
-+ConsCh:0   ConsVariants ;
+LEXICON AdjCons
++Adj+ConsCh:0   ConsVariants ;
 
 LEXICON ConsVariants
-biêng:biếc # ;
-bôm:bốp    # ;
-thiêm:thiếp # ;
+biêng:biếc   # ;
+bôm:bốp      # ;
+thiêm:thiếp  # ;
 
-LEXICON IrrTone
-+IrrTone:0   IrrToneVariants ;
+LEXICON AdjIrr
++Adj+IrrTone:0   IrrVariants ;
 
-LEXICON IrrToneVariants
+LEXICON IrrVariants
 thơ_thẩn:thơ_thơ_thẩn_thẩn   # ;
 lơ_láo:lơ_lơ_láo_láo         # ;
 ngơ_ngác:ngơ_ngơ_ngác_ngác   # ;
 
-LEXICON Substitution
-+Subst:0 SubstVariants ;
+! =================
+! ==== Nouns ======
+! =================
+
+LEXICON Nouns
+trời     NSubst ;
+
+LEXICON NSubst
++N+Subst:0 SubstVariants ;
 
 LEXICON SubstVariants
 chời:trời   # ;
 
-LEXICON Insertion
-+Insert:0 InsertVariants ;
+! =================
+! ==== Verbs ======
+! =================
+
+LEXICON Verbs
+ăn     VInsert ;
+đã_ăn  VRemove ;
+
+LEXICON VInsert
++V+Insert:0 InsertVariants ;
 
 LEXICON InsertVariants
-đang_ăn:ăn  # ;   ! Inserted "đang" to mark progressive
+đang_ăn:ăn  # ;
 
-
-LEXICON Removal
-+Remove:0 RemoveVariants ;
+LEXICON VRemove
++V+Remove:0 RemoveVariants ;
 
 LEXICON RemoveVariants
-ăn:đã_ăn  # ;  ! remove past marker "đã"
+ăn:đã_ăn  # ;
 
 END
