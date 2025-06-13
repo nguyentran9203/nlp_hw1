@@ -1,7 +1,4 @@
 Multichar_Symbols
-    +Adj     ! Adjective
-    +N       ! Noun
-    +V       ! Verb
     +Redup   ! Reduplication
     +ToneCh  ! Tone change
     +ConsCh  ! Consonant change
@@ -34,12 +31,15 @@ LEXICON Adjectives
     ngơ_ngác AdjIrr ;
 
 LEXICON AdjRedup
-+Adj+Redup:luôn   # ;
-+Adj+Redup:nhanh  # ;
-+Adj+Redup:lâu   # ;
++Redup:   Repeat ;
+
+LEXICON Repeat
++luôn # ;
++nhanh # ;
++nhanh # ;
 
 LEXICON AdjTone
-+Adj+ToneCh:''   ToneVariants ;
++ToneCh:''   ToneVariants ;
 
 LEXICON ToneVariants
 đo:đo_đỏ     # ;
@@ -47,7 +47,7 @@ trăng:trăng_trắng # ;
 chầm:chầm_chậm   # ;
 
 LEXICON AdjCons
-+Adj+ConsCh:0   ConsVariants ;
++ConsCh:0   ConsVariants ;
 
 LEXICON ConsVariants
 +biêng:biêng_biếc   # ;
@@ -55,7 +55,7 @@ LEXICON ConsVariants
 +thiêm:thiêm_thiếp  # ;
 
 LEXICON AdjIrr
-+Adj+IrrTone:''   IrrVariants ;
++IrrTone:''   IrrVariants ;
 
 LEXICON IrrVariants
 +thơ_thẩn:thơ_thơ_thẩn_thẩn   # ;
@@ -70,7 +70,7 @@ LEXICON Nouns
 trời     NSubst ;
 
 LEXICON NSubst
-+N+Subst:'' SubstVariants ;
++Subst:'' SubstVariants ;
 
 LEXICON SubstVariants
 +chời:chời   # ;
@@ -84,13 +84,13 @@ LEXICON Verbs
 đã_ăn  VRemove ;
 
 LEXICON VInsert
-+V+Insert:'' InsertVariants ;
++Insert:'' InsertVariants ;
 
 LEXICON InsertVariants
 +đang:đang_ăn  # ;
 
 LEXICON VRemove
-+V+Remove:'' RemoveVariants ;
++Remove:'' RemoveVariants ;
 
 LEXICON RemoveVariants
 +đã:ăn  # ;
