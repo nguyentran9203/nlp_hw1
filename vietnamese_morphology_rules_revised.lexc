@@ -3,18 +3,9 @@ Multichar_Symbols
     +ToneCh  ! Tone change
     +ConsCh  ! Consonant change
     +IrrTone ! Irregular tone redup
-    +Subst   ! Substitution
-    +Insert  ! Insertion
-    +Remove  ! Removal
 
 LEXICON Root
     Adjectives ;
-    Nouns ;
-    Verbs ;
-
-! =====================
-! ==== Adjectives =====
-! =====================
 
 LEXICON Adjectives
     luôn     AdjRedup ;
@@ -68,25 +59,5 @@ LEXICON ASubst
 
 LEXICON SubstVariants
 +đo:đo   # ;
-
-! =================
-! ==== Verbs ======
-! =================
-
-LEXICON Verbs
-ăn     VInsert ;
-đã+%ăn  VRemove ;
-
-LEXICON VInsert
-+Insert:'' InsertVariants ;
-
-LEXICON InsertVariants
-+đang:đang+%ăn  # ;
-
-LEXICON VRemove
-+Remove:'' RemoveVariants ;
-
-LEXICON RemoveVariants
-+đã:ăn  # ;
 
 END
