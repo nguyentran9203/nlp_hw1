@@ -37,33 +37,33 @@ LEXICON AdjRedup
 +Adj+Redup:^   RedupResult ;
 
 LEXICON RedupResult
-:luôn     # ;
-:nhanh    # ;
-:lâu      # ;
++luôn     # ;
++nhanh    # ;
++lâu      # ;
 
 LEXICON AdjTone
 +Adj+ToneCh:0   ToneVariants ;
 
 LEXICON ToneVariants
-đo:đỏ     # ;
-trăng:trắng # ;
-chầm:chậm   # ;
+đo:đo_đỏ     # ;
+trăng:trăng_trắng # ;
+chầm:chầm_chậm   # ;
 
 LEXICON AdjCons
 +Adj+ConsCh:0   ConsVariants ;
 
 LEXICON ConsVariants
-biêng:biếc   # ;
-bôm:bốp      # ;
-thiêm:thiếp  # ;
++biêng:biêng_biếc   # ;
++bôm:bôm_bốp      # ;
++thiêm:thiêm_thiếp  # ;
 
 LEXICON AdjIrr
 +Adj+IrrTone:0   IrrVariants ;
 
 LEXICON IrrVariants
-thơ_thẩn:thơ_thơ_thẩn_thẩn   # ;
-lơ_láo:lơ_lơ_láo_láo         # ;
-ngơ_ngác:ngơ_ngơ_ngác_ngác   # ;
++thơ_thẩn:thơ_thơ_thẩn_thẩn   # ;
++lơ_láo:lơ_lơ_láo_láo         # ;
++ngơ_ngác:ngơ_ngơ_ngác_ngác   # ;
 
 ! =================
 ! ==== Nouns ======
@@ -90,12 +90,12 @@ LEXICON VInsert
 +V+Insert:0 InsertVariants ;
 
 LEXICON InsertVariants
-+đang_ăn:ăn  # ;
++đang:đang_ăn  # ;
 
 LEXICON VRemove
 +V+Remove:0 RemoveVariants ;
 
 LEXICON RemoveVariants
-+ăn:đã_ăn  # ;
++đã:ăn  # ;
 
 END
