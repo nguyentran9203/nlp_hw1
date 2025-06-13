@@ -1,0 +1,101 @@
+Multichar_Symbols
+    +Adj     ! Adjective
+    +N       ! Noun
+    +V       ! Verb
+    +Redup   ! Reduplication
+    +ToneCh  ! Tone change
+    +ConsCh  ! Consonant change
+    +IrrTone ! Irregular tone redup
+    +Subst   ! Substitution
+    +Insert  ! Insertion
+    +Remove  ! Removal
+
+LEXICON Root
+    Adjectives ;
+    Nouns ;
+    Verbs ;
+
+! =====================
+! ==== Adjectives =====
+! =====================
+
+LEXICON Adjectives
+    luôn     AdjRedup ;
+    nhanh    AdjRedup ;
+    lâu      AdjRedup ;
+    đỏ       AdjTone ;
+    trắng    AdjTone ;
+    chầm     AdjTone ;
+    biếc     AdjCons ;
+    bốp      AdjCons ;
+    thiếp    AdjCons ;
+    lơ_láo   AdjIrr ;
+    thơ_thẩn AdjIrr ;
+    ngơ_ngác AdjIrr ;
+
+LEXICON AdjRedup
++Adj+Redup:^   RedupResult ;
+
+LEXICON RedupResult
+luôn     # ;
+nhanh    # ;
+lâu      # ;
+
+LEXICON AdjTone
++Adj+ToneCh:0   ToneVariants ;
+
+LEXICON ToneVariants
+đo:đỏ     # ;
+trăng:trắng # ;
+chầm:chậm   # ;
+
+LEXICON AdjCons
++Adj+ConsCh:0   ConsVariants ;
+
+LEXICON ConsVariants
+biêng:biếc   # ;
+bôm:bốp      # ;
+thiêm:thiếp  # ;
+
+LEXICON AdjIrr
++Adj+IrrTone:0   IrrVariants ;
+
+LEXICON IrrVariants
+thơ_thẩn:thơ_thơ_thẩn_thẩn   # ;
+lơ_láo:lơ_lơ_láo_láo         # ;
+ngơ_ngác:ngơ_ngơ_ngác_ngác   # ;
+
+! =================
+! ==== Nouns ======
+! =================
+
+LEXICON Nouns
+trời     NSubst ;
+
+LEXICON NSubst
++N+Subst:0 SubstVariants ;
+
+LEXICON SubstVariants
+chời:trời   # ;
+
+! =================
+! ==== Verbs ======
+! =================
+
+LEXICON Verbs
+ăn     VInsert ;
+đã_ăn  VRemove ;
+
+LEXICON VInsert
++V+Insert:0 InsertVariants ;
+
+LEXICON InsertVariants
+đang_ăn:ăn  # ;
+
+LEXICON VRemove
++V+Remove:0 RemoveVariants ;
+
+LEXICON RemoveVariants
+ăn:đã_ăn  # ;
+
+END
