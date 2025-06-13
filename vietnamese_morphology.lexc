@@ -26,9 +26,9 @@ LEXICON Adjectives
     biếc     AdjCons ;
     bốp      AdjCons ;
     thiếp    AdjCons ;
-    lơ_láo   AdjIrr ;
-    thơ_thẩn AdjIrr ;
-    ngơ_ngác AdjIrr ;
+    lơ%láo   AdjIrr ;
+    thơ%thẩn AdjIrr ;
+    ngơ%ngác AdjIrr ;
 
 LEXICON AdjRedup
 +Redup:   Repeat ;
@@ -42,25 +42,25 @@ LEXICON AdjTone
 +ToneCh:''   ToneVariants ;
 
 LEXICON ToneVariants
-đo:đo_đỏ     # ;
-trăng:trăng_trắng # ;
-chầm:chầm_chậm   # ;
+đo:đo%đỏ     # ;
+trăng:trăng%trắng # ;
+chầm:chầm%chậm   # ;
 
 LEXICON AdjCons
 +ConsCh:0   ConsVariants ;
 
 LEXICON ConsVariants
-+biêng:biêng_biếc   # ;
-+bôm:bôm_bốp      # ;
-+thiêm:thiêm_thiếp  # ;
++biêng:biêng%biếc   # ;
++bôm:bôm%bốp      # ;
++thiêm:thiêm%thiếp  # ;
 
 LEXICON AdjIrr
 +IrrTone:''   IrrVariants ;
 
 LEXICON IrrVariants
-+thơ_thẩn:thơ_thơ_thẩn_thẩn   # ;
-+lơ_láo:lơ_lơ_láo_láo         # ;
-+ngơ_ngác:ngơ_ngơ_ngác_ngác   # ;
++thơ%thẩn:thơ%thơ%thẩn%thẩn   # ;
++lơ%láo:lơ%lơ%láo%láo         # ;
++ngơ%ngác:ngơ%ngơ%ngác%ngác   # ;
 
 ! =================
 ! ==== Nouns ======
@@ -81,13 +81,13 @@ LEXICON SubstVariants
 
 LEXICON Verbs
 ăn     VInsert ;
-đã_ăn  VRemove ;
+đã%ăn  VRemove ;
 
 LEXICON VInsert
 +Insert:'' InsertVariants ;
 
 LEXICON InsertVariants
-+đang:đang_ăn  # ;
++đang:đang%ăn  # ;
 
 LEXICON VRemove
 +Remove:'' RemoveVariants ;
