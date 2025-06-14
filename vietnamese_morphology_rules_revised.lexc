@@ -20,6 +20,9 @@ LEXICON Adjectives
     lơ+%láo   AdjIrr ;
     thơ+%thẩn AdjIrr ;
     ngơ+%ngác AdjIrr ;
+    trăng^trắng RemoveAdjRedup ;
+    đo^đỏ     RemoveAdjRedup ;
+    chầm^chậm RemoveAdjRedup ;
 
 LEXICON AdjRedup
 +Redup:   Repeat ;
@@ -39,6 +42,9 @@ LEXICON ToneVariants
 
 LEXICON AdjCons
 +ConsCh:0   ConsVariants ;
+
+LEXICON RemoveAdjRedup
+%0:%0    # ;
 
 LEXICON ConsVariants
 +biêng:biêng+%biếc   # ;
