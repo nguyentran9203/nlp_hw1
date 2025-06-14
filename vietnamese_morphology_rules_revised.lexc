@@ -30,12 +30,12 @@ LEXICON Repeat
 +%chậm # ;
 
 LEXICON AdjTone
-+ToneCh:''   ToneVariants ;
++ToneCh:0   ToneVariants ;
 
 LEXICON ToneVariants
-+trắng+ToneCh:"tră^ng trắng" # ;
-+đỏ+ToneCh:"đo^đỏ"           # ;
-+chậm+ToneCh:"chầm^chậm"     # ;
++trắng+ToneCh:tră^ng trắng # ;
++đỏ+ToneCh:đo^đỏ           # ;
++chậm+ToneCh:chầm^chậm     # ;
 
 LEXICON AdjCons
 +ConsCh:0   ConsVariants ;
