@@ -8,12 +8,12 @@ LEXICON Root
     Adjectives ;
 
 LEXICON Adjectives
-    đỏ:đỏ^       AdjRedup ;
-    trắng:trắng^    AdjRedup ;
-    chậm:chậm^     AdjRedup ;
+    đỏ       AdjRedup ;
+    trắng    AdjRedup ;
+    chậm     AdjRedup ;
     đo       AdjTone ;
-    trăng^    AdjTone ;
-    chầm^     AdjTone ;
+    trăng    AdjTone ;
+    chầm     AdjTone ;
     biếc     AdjCons ;
     bốp      AdjCons ;
     thiếp    AdjCons ;
