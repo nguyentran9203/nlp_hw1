@@ -33,9 +33,9 @@ LEXICON AdjTone
 +ToneCh:''   ToneVariants ;
 
 LEXICON ToneVariants
-+ToneCh:đo^     # ;
-+ToneCh:trăng^  # ;
-+ToneCh:chầm^   # ;
++đỏ+ToneCh:đo^đỏ     # ;
++trắng+ToneCh:trăng^  # ;
++chậm+ToneCh:chầm^   # ;
 
 LEXICON AdjCons
 +ConsCh:0   ConsVariants ;
