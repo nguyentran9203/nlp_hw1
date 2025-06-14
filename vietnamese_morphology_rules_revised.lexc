@@ -3,7 +3,6 @@ Multichar_Symbols
     +ToneCh    ! Tone change
     +ConsCh    ! Consonant change
     +IrrTone   ! Irregular tone redup
-    ^          ! caret separator
 
 LEXICON Root
     Adjectives ;
