@@ -12,16 +12,117 @@ Initials ;
 LEXICON Initials
 b : b Vowels ;
 p : p Vowels ;
+m : m Vowels ;
+f : f Vowels ;
+v : v Vowels ;
+d : d Vowels ;
+t : t Vowels ;
+n : n Vowels ;
+l : l Vowels ;
+g : g Vowels ;
+k : k Vowels ;
+ng : ng Vowels ;
+h : h Vowels ;
+đ : đ Vowels ;
+th : th Vowels ;
+nh : nh Vowels ;
+kh : kh Vowels ;
+s : s Vowels ;
+x : x Vowels ;
+r : r Vowels ;
+c : c Vowels ;
+q : q Vowels ;
+ch : ch Vowels ;
+tr : tr Vowels ;
 %0 : %0 Vowels ;
 
 LEXICON Vowels
 a : a Tones ;
 ă : ă Tones ;
+â : â Tones ;
+e : e Tones ;
+ê : ê Tones ;
+i : i Tones ;
+y : y Tones ;
+o : o Tones ;
+ô : ô Tones ;
+ơ : ơ Tones ;
+u : u Tones ;
+ư : ư Tones ;
 
 LEXICON Tones
-+Ton_a : +Ton_a Finals ;
-+Ton_á : +Ton_á Finals ;
++Ton_a : +Ton_a Finals RedupTypes ;
++Ton_á : +Ton_á Finals RedupTypes ;
++Ton_à : +Ton_à Finals RedupTypes ;
++Ton_ả : +Ton_ả Finals RedupTypes ;
++Ton_ã : +Ton_ã Finals RedupTypes ;
++Ton_ạ : +Ton_ạ Finals RedupTypes ;
 
 LEXICON Finals
++Cons_p : +Cons_p ;
++Cons_t : +Cons_t ;
++Cons_c : +Cons_c ;
++Cons_ch : +Cons_ch ;
 +Cons_m : +Cons_m ;
++Cons_n : +Cons_n ;
++Cons_ng : +Cons_ng ;
++Cons_nh : +Cons_nh ;
 %0 : %0 ;
+
+LEXICON RedupTypes
+
+! 1. Full reduplication (repeat entire syllable)
++Redup : # ;
+
+! 2. Tone-according reduplication
++ToneRedup : ToneRedupRule ;
+
+! 3. Consonant-change reduplication
++ConsRedup : ConsRedupRule ;
+
+LEXICON ToneRedupRule
+
+! Tone change rules (non-flat → flat)
+
++Ton_a : +Ton_á Redup ;
++Ton_a : +Ton_ả Redup ;
+
++Ton_à : +Ton_ã Redup ;
++Ton_à : +Ton_ạ Redup ;
+
+! For other tones, just keep as is (or extend here if needed)
++Ton_á : +Ton_á Redup ;
++Ton_ả : +Ton_ả Redup ;
++Ton_ã : +Ton_ã Redup ;
++Ton_ạ : +Ton_ạ Redup ;
++Ton_ả : +Ton_ả Redup ;
++Ton_ã : +Ton_ã Redup ;
+
+LEXICON ConsRedupRule
+
+! Consonant + tone change rules
+
++Cons_m +Ton_a : +Cons_p +Ton_á Redup ;
++Cons_m +Ton_a : +Cons_p +Ton_ả Redup ;
+
++Cons_n +Ton_a : +Cons_t +Ton_á Redup ;
++Cons_n +Ton_a : +Cons_t +Ton_ả Redup ;
+
++Cons_ng +Ton_à : +Cons_c +Ton_ã Redup ;
++Cons_ng +Ton_à : +Cons_c +Ton_ạ Redup ;
+
++Cons_nh +Ton_à : +Cons_ch +Ton_ã Redup ;
++Cons_nh +Ton_à : +Cons_ch +Ton_ạ Redup ;
+
+! Default fallback - no change
++Cons_m +Ton_á : +Cons_m +Ton_á Redup ;
++Cons_n +Ton_á : +Cons_n +Ton_á Redup ;
++Cons_ng +Ton_ã : +Cons_ng +Ton_ã Redup ;
++Cons_nh +Ton_ã : +Cons_nh +Ton_ã Redup ;
+
+LEXICON Redup
+
+! After reduplication, stop
+# ;
+
+END
