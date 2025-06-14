@@ -1,71 +1,76 @@
-# Vietnamese Reduplication Lexicon for HFST-LexC
-# Proper syntax version
+# Vietnamese Reduplication Lexicon for HFST
+# Based on:
+# Nguyen et al. (2007) "A lexicon for Vietnamese language processing"
+# Phuong et al. (2009) "Finite-State Description of Vietnamese Reduplication"
 
 Multichar_Symbols
-
-! Vietnamese tones
-+TONEMARK_á +TONEMARK_à +TONEMARK_ả +TONEMARK_ã +TONEMARK_ạ
-
-! Reduplication tags
++Ton_a +Ton_á +Ton_à +Ton_ả +Ton_ã +Ton_ạ
++Cons_p +Cons_t +Cons_c +Cons_ch +Cons_m +Cons_n +Cons_ng +Cons_nh
 +Redup +ToneRedup +ConsRedup
 
 LEXICON Root
+Initials Vowels Tones Finals RedupTypes ;
 
-! 1. Full Reduplication (AA pattern)
-ConsonantInitial Vowel ToneMark ConsonantFinal FullRedup ;
+LEXICON RedupTypes
 
-! 2. Tone-according Reduplication
-ConsonantInitial Vowel ToneMark ConsonantFinal ToneRedup ;
+! 1. Full reduplication (AA pattern)
+Initials Vowels Tones Finals "+REDUP":Initials Vowels Tones Finals # ;
 
-! 3. Consonant-change Reduplication 
-ConsonantInitial Vowel ToneMark ConsonantFinal ConsRedup ;
+! 2. Tone-according reduplication
+Initials Vowels Tones Finals "+TONEREDUP":Initials Vowels Tones Finals ToneRedup ;
 
-LEXICON FullRedup
-
-ConsonantInitial Vowel ToneMark ConsonantFinal "+Redup" # ;
+! 3. Consonant-change reduplication
+Initials Vowels Tones Finals "+CONSREDUP":Initials Vowels Tones Finals ConsRedup ;
 
 LEXICON ToneRedup
 
-! Tone mappings:
-! á → a, ả → a (high to mid flat)
-! ã → à, ạ → à (low to low flat)
-ConsonantInitial Vowel a ConsonantFinal "+ToneRedup" : 
-    ! Input pattern: C V á/ả C
-    ConsonantInitial Vowel (á|ả) ConsonantFinal ;
+! Tone change rules (non-flat → flat)
+Initials Vowels +Ton_a Finals # : 
+    Initials Vowels (+Ton_á|+Ton_ả) Finals ;
 
-ConsonantInitial Vowel à ConsonantFinal "+ToneRedup" : 
-    ! Input pattern: C V ã/ạ C
-    ConsonantInitial Vowel (ã|ạ) ConsonantFinal ;
+Initials Vowels +Ton_à Finals # : 
+    Initials Vowels (+Ton_ã|+Ton_ạ) Finals ;
 
 LEXICON ConsRedup
 
-! Consonant changes with tone changes:
-! -p → -m, -t → -n, -c → -ng, -ch → -nh
-ConsonantInitial Vowel a m "+ConsRedup" : 
-    ConsonantInitial Vowel (á|ả) p ;
+! Consonant+tone change rules
+Initials Vowels +Ton_a +Cons_m # : 
+    Initials Vowels (+Ton_á|+Ton_ả) +Cons_p ;
 
-ConsonantInitial Vowel a n "+ConsRedup" : 
-    ConsonantInitial Vowel (á|ả) t ;
+Initials Vowels +Ton_a +Cons_n # : 
+    Initials Vowels (+Ton_á|+Ton_ả) +Cons_t ;
 
-ConsonantInitial Vowel à ng "+ConsRedup" : 
-    ConsonantInitial Vowel (ã|ạ) c ;
+Initials Vowels +Ton_à +Cons_ng # : 
+    Initials Vowels (+Ton_ã|+Ton_ạ) +Cons_c ;
 
-ConsonantInitial Vowel à nh "+ConsRedup" : 
-    ConsonantInitial Vowel (ã|ạ) ch ;
+Initials Vowels +Ton_à +Cons_nh # : 
+    Initials Vowels (+Ton_ã|+Ton_ạ) +Cons_ch ;
 
-! Define basic syllable components
-LEXICON ConsonantInitial
+! Phoneme definitions
+LEXICON Initials
 
-b c d đ g h k l m n p q r s t v x ;
+b p m f v ;
+d t n l ;
+g k ng h ;
+đ th nh kh ;
+s x r ;
+c q ch tr ;
+%0 ;  %0 represents null initial
 
-LEXICON Vowel
+LEXICON Vowels
 
-a ă â e ê i o ô ơ u ư y ;
+a ă â ;
+e ê ;
+i y ;
+o ô ơ ;
+u ư ;
 
-LEXICON ToneMark
+LEXICON Tones
 
-á à ả ã ạ ;
++Ton_a +Ton_á +Ton_à +Ton_ả +Ton_ã +Ton_ạ ;
 
-LEXICON ConsonantFinal
+LEXICON Finals
 
-p t c ch m n ng nh %0 ;
++Cons_p +Cons_t +Cons_c +Cons_ch ;
++Cons_m +Cons_n +Cons_ng +Cons_nh ;
+%0 ;  %0 represents null final
