@@ -12,9 +12,9 @@ LEXICON Adjectives
     trắng    AdjRedup ;
     chậm     AdjRedup ;
     ngơ      AdjRedup;
-    đo       AdjTone ;
-    trăng    AdjTone ;
-    chầm     AdjTone ;
+    đỏ:đo       AdjTone ;
+    trắng:tră    AdjTone ;
+    chậm:chầ     AdjTone ;
     biếc     AdjCons ;
     bốp      AdjCons ;
     thiếp    AdjCons ;
