@@ -1,0 +1,71 @@
+# Vietnamese Reduplication Lexicon for HFST-LexC
+# Proper syntax version
+
+Multichar_Symbols
+
+! Vietnamese tones
++TONEMARK_á +TONEMARK_à +TONEMARK_ả +TONEMARK_ã +TONEMARK_ạ
+
+! Reduplication tags
++Redup +ToneRedup +ConsRedup
+
+LEXICON Root
+
+! 1. Full Reduplication (AA pattern)
+ConsonantInitial Vowel ToneMark ConsonantFinal FullRedup ;
+
+! 2. Tone-according Reduplication
+ConsonantInitial Vowel ToneMark ConsonantFinal ToneRedup ;
+
+! 3. Consonant-change Reduplication 
+ConsonantInitial Vowel ToneMark ConsonantFinal ConsRedup ;
+
+LEXICON FullRedup
+
+ConsonantInitial Vowel ToneMark ConsonantFinal "+Redup" # ;
+
+LEXICON ToneRedup
+
+! Tone mappings:
+! á → a, ả → a (high to mid flat)
+! ã → à, ạ → à (low to low flat)
+ConsonantInitial Vowel a ConsonantFinal "+ToneRedup" : 
+    ! Input pattern: C V á/ả C
+    ConsonantInitial Vowel (á|ả) ConsonantFinal ;
+
+ConsonantInitial Vowel à ConsonantFinal "+ToneRedup" : 
+    ! Input pattern: C V ã/ạ C
+    ConsonantInitial Vowel (ã|ạ) ConsonantFinal ;
+
+LEXICON ConsRedup
+
+! Consonant changes with tone changes:
+! -p → -m, -t → -n, -c → -ng, -ch → -nh
+ConsonantInitial Vowel a m "+ConsRedup" : 
+    ConsonantInitial Vowel (á|ả) p ;
+
+ConsonantInitial Vowel a n "+ConsRedup" : 
+    ConsonantInitial Vowel (á|ả) t ;
+
+ConsonantInitial Vowel à ng "+ConsRedup" : 
+    ConsonantInitial Vowel (ã|ạ) c ;
+
+ConsonantInitial Vowel à nh "+ConsRedup" : 
+    ConsonantInitial Vowel (ã|ạ) ch ;
+
+! Define basic syllable components
+LEXICON ConsonantInitial
+
+b c d đ g h k l m n p q r s t v x ;
+
+LEXICON Vowel
+
+a ă â e ê i o ô ơ u ư y ;
+
+LEXICON ToneMark
+
+á à ả ã ạ ;
+
+LEXICON ConsonantFinal
+
+p t c ch m n ng nh %0 ;
