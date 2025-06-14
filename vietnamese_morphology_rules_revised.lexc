@@ -8,12 +8,12 @@ LEXICON Root
     Adjectives ;
 
 LEXICON Adjectives
-    luôn     AdjRedup ;
-    nhanh    AdjRedup ;
-    lâu      AdjRedup ;
-    đỏ       AdjTone ;
-    trắng    AdjTone ;
-    chậm     AdjTone ;
+    đỏ:đỏ^       AdjRedup ;
+    trắng:trắng^    AdjRedup ;
+    chậm:chậm^     AdjRedup ;
+    đỏ:đo^       AdjTone ;
+    trắng:trăng^    AdjTone ;
+    chậm:chầm^     AdjTone ;
     biếc     AdjCons ;
     bốp      AdjCons ;
     thiếp    AdjCons ;
@@ -25,9 +25,9 @@ LEXICON AdjRedup
 +Redup:   Repeat ;
 
 LEXICON Repeat
-+%luôn # ;
-+%nhanh # ;
-+%lâu # ;
++%đỏ # ;
++%trắng # ;
++%chậm # ;
 
 LEXICON AdjTone
 +ToneCh:''   ToneVariants ;
