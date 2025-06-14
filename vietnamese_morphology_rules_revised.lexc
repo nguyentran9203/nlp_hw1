@@ -11,9 +11,9 @@ LEXICON Adjectives
     đỏ:đỏ^       AdjRedup ;
     trắng:trắng^    AdjRedup ;
     chậm:chậm^     AdjRedup ;
-    đỏ:đo^       AdjTone ;
-    trắng:trăng^    AdjTone ;
-    chậm:chầm^     AdjTone ;
+    đo       AdjTone ;
+    trăng^    AdjTone ;
+    chầm^     AdjTone ;
     biếc     AdjCons ;
     bốp      AdjCons ;
     thiếp    AdjCons ;
