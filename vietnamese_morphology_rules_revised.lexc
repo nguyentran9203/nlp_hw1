@@ -12,7 +12,6 @@ LEXICON Adjectives
     nhanh    AdjRedup ;
     lâu      AdjRedup ;
     đỏ       AdjTone ;
-    đỏ     ASubst     ;
     trắng    AdjTone ;
     chậm     AdjTone ;
     biếc     AdjCons ;
@@ -54,10 +53,5 @@ LEXICON IrrVariants
 +lơ+%láo:lơ+%lơ+%láo+%láo         # ;
 +ngơ+%ngác:ngơ+%ngơ+%ngác+%ngác   # ;
 
-LEXICON ASubst
-+Subst:'' SubstVariants ;
-
-LEXICON SubstVariants
-+đo:đo   # ;
 
 END
