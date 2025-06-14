@@ -2,7 +2,7 @@ Multichar_Symbols
     +Redup   ! Reduplication
     +ToneCh  ! Tone change
     +ConsCh  ! Consonant change
-    +IrrTone ! Irregular tone redup 
+    +IrrTone ! Irregular tone redup
 
 LEXICON Root
     Adjectives ;
@@ -52,6 +52,3 @@ LEXICON IrrVariants
 +thơ+%thẩn:thơ+%thơ+%thẩn+%thẩn   # ;
 +lơ+%láo:lơ+%lơ+%láo+%láo         # ;
 +ngơ+%ngác:ngơ+%ngơ+%ngác+%ngác   # ;
-
-
-END
