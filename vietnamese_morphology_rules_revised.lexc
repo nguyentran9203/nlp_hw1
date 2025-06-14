@@ -11,6 +11,7 @@ LEXICON Adjectives
     đỏ       AdjRedup ;
     trắng    AdjRedup ;
     chậm     AdjRedup ;
+    ngơ      AdjRedup;
     đo       AdjTone ;
     trăng    AdjTone ;
     chầm     AdjTone ;
@@ -28,6 +29,7 @@ LEXICON Repeat
 +%đỏ # ;
 +%trắng # ;
 +%chậm # ;
++%ngơ # ;
 
 LEXICON AdjTone
 +ToneCh:''   ToneVariants ;
